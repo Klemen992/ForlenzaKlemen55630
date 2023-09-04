@@ -1,0 +1,27 @@
+{% extends 'aplicacion/base.html' %}
+{% load  %}
+
+
+{% block titulo %}
+
+Agregar Maceta
+
+{% endblock titulo %}
+    
+
+{% block contenido %}
+<body>
+    <h2>Agregar una maceta</h2>
+    <form action="" method="post">
+      {% csrf_token %}
+       <table>
+         {{form.as_table}}
+       </table>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+    
+{% endblock contenido %}
+    

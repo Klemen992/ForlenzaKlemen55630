@@ -1,0 +1,49 @@
+{% extends 'aplicacion/base.html' %}
+{% load  %}
+
+
+{% block titulo %}
+
+Sitio de Plantas
+
+{% endblock titulo %}
+    
+
+{% block contenido %}
+    
+
+
+<h1>Plantas <i class="fa-solid fa-seedling "></i></h1> <br>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Especie</th>
+            <th>Genero</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+
+    <body>
+
+        <h6>{{Titel|capfirst}} - {% now 'd / m / y' %}</h6>
+        <h6>Cantidad de plantas:{{plants|length}}</h6>     
+
+    {% for p in plants  %}   
+        <tr>
+            <td>{{p.id}}</td>
+            <td>{{p.especie}}</td>
+            <td>{{p.genero}}</td>
+            <td>{{p.precio}}</td>
+        </tr>
+    
+    {% endfor %}
+        </body>
+        </table>
+
+        
+
+
+
+{% endblock contenido %}

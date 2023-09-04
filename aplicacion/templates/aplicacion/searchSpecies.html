@@ -1,0 +1,26 @@
+{% extends 'aplicacion/base.html' %}
+{% load  %}
+
+
+{% block titulo %}
+
+Buscar Plantas
+
+{% endblock titulo %}
+    
+
+{% block contenido %}
+<body>
+    <h2>Buscar Plantas</h2>
+    <form action="/search2" method="get">
+        {% csrf_token %}
+        <p>Patron en Buscar a Plantas: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+    
+{% endblock contenido %}
+
+

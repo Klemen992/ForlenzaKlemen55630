@@ -1,0 +1,103 @@
+{% extends 'aplicacion/base.html' %}
+{% load  %}
+
+
+{% block titulo %}
+
+Sitio de Macetas
+
+{% endblock titulo %}
+    
+
+{% block contenido %}
+    
+<table>
+    <tr>
+        <td width="200"><h1>Macetas</h1></td> 
+        <td>
+            <a
+            href="{% url 'create_blumentoepfe' %}"
+            class= "btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" title="New Record"> </i>
+            </a>
+        </td>
+    </tr>
+</table>
+<br>
+
+
+
+
+ <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Material</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+
+    <body>
+
+        <h6>{{Titel|capfirst}} - {% now 'd / m / y' %}</h6>
+        <h6>Cantidad de macetas:{{flowerpots|length}}</h6>     
+
+         {% for f in flowerpots  %}   
+        <tr>
+            <td>{{f.id}}</td>
+            <td>{{f.nombre}}</td>
+            <td>{{f.material}}</td>
+            <td>{{f.precio}}</td>
+        <td>                                           
+            <a
+              href="{% url 'update_blumentoepfe' f.id %}" 
+              class="btn btn-primary"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+            ><i class="fa fa-edit fa-sm" title="Edit Record"></i>     {% comment %}Edit es un lapicito {% endcomment %}
+            </a>
+            <a
+              href=" {% url 'delete_blumentoepfe' f.id %}"
+              class="btn btn-danger"
+              style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+              ><i class="fa fa-trash fa-sm" title="Delete Record"></i> {% comment %}trash es una absura {% endcomment %}
+            </a>
+          </td>      
+        </tr>
+    {% endfor %}
+        </body>
+    </table>
+
+        <h5>Descuentos: {{descuento.0}}, {{descuento.1}} </h5> 
+
+
+        {% endblock contenido %}
+
+{% comment %}
+    Prueba de comment (comentario como #)
+{% endcomment %}
+    
+
+{% comment %} {% endblock contenido %}
+
+
+
+{% for profesor in profesores %}
+<tr>
+    <td>{{ profesor.id }}</td>
+    <td>{{ profesor.nombre }}</td>
+    <td>{{ profesor.apellido }}</td>
+    <td>{{ profesor.email }}</td>
+    <td>{{ profesor.profesion }}</td>
+    <td>
+        <a
+          href="{% url 'update_profesor' profesor.id %}"
+          class="btn btn-primary"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+          ><i class="fa fa-edit fa-sm" title="Edit Record"></i>
+        </a>
+        <a
+          href="{% url 'delete_profesor' profesor.id %}"
+          class="btn btn-danger"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+          ><i class="fa fa-trash fa-sm" title="Delete Record"></i> {% endcomment %}

@@ -1,0 +1,149 @@
+{% extends 'aplicacion/base.html' %}
+{% load  %}
+
+
+{% block titulo %}
+
+Quien soy yo?
+
+{% endblock titulo %}
+    
+
+{% block contenido %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-picture {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .about-me {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acerca de Mí</h1>
+    </header>
+    <div class="container">
+        <img class="profile-picture" src="/media/avatares/yo.jpg" alt="Mi Foto de Perfil">
+        <div class="about-me">
+            <h2>Klemen Matjaz Forlenza Podboj</h2>
+            <p><p>
+                ¡Hola! Soy Klemen Matjaz Forlenza Podboj, argentino de origen con un nombre de raíces eslovenas y un apellido italiano. Mi viaje vital comenzó el 08/11/1992, y durante una parte significativa de mi vida, viví en Alemania desde los 9 hasta los 20 años.
+            </p>
+            <p>
+                Mi formación académica me llevó a estudiar Recursos Humanos, y con dedicación, me gradué como Analista de Recursos Humanos. Actualmente, mi carrera me ha llevado a PDA International, donde trabajo en el área de marketing. Aunque mi trabajo implica muchas responsabilidades administrativas, estoy emocionado por mi actual enfoque en la programación, que representa un cambio significativo en mi trayectoria profesional.
+            </p>
+            <p>
+                Soy un apasionado de la interacción social y la conexión con nuevas personas, lo que me lleva a disfrutar de los coworkings como lugares de encuentro. Además, en mi tiempo libre, me encanta explorar nuevos horizontes participando en talleres y cursos que me permiten descubrir cosas nuevas.
+            </p>
+            <p>
+                Entre mis actividades favoritas, destaco mis salidas a eventos como Mundolingo, un bar que fomenta el intercambio de idiomas, y Tandem alemán, una reunión en un restaurante de comida alemana donde se practica el alemán.
+            </p>
+            <p>
+                Además, me encanta sumergirme en la atmósfera única de las reuniones de la asociación civil "Fuego Austral", la versión argentina del famoso "Burning Man".
+            </p>
+            <p>
+                Por último, una de mis grandes pasiones es el mundo de las plantas de interior. Me cautivan las variedades tropicales y exóticas, y disfruto cuidando y cultivando estas bellezas verdes en mi hogar.
+            </p></p>
+            <div class="social-links">
+                <a href="https://twitter.com/Mattyy992"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/mattyy992/"><i class="fab fa-instagram"></i></a>
+                <!-- Agrega más enlaces a tus redes sociales -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
+{% comment %} <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS aquí -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sobre Mí</h1>
+        </header>
+        <section class="content">
+            <p>
+                ¡Hola! Soy Klemen Matjaz Forlenza Podboj, argentino de origen con un nombre de raíces eslovenas y un apellido italiano. Mi viaje vital comenzó el 08/11/1992, y durante una parte significativa de mi vida, viví en Alemania desde los 9 hasta los 20 años.
+            </p>
+            <p>
+                Mi formación académica me llevó a estudiar Recursos Humanos, y con dedicación, me gradué como Analista de Recursos Humanos. Actualmente, mi carrera me ha llevado a PDA International, donde trabajo en el área de marketing. Aunque mi trabajo implica muchas responsabilidades administrativas, estoy emocionado por mi actual enfoque en la programación, que representa un cambio significativo en mi trayectoria profesional.
+            </p>
+            <p>
+                Soy un apasionado de la interacción social y la conexión con nuevas personas, lo que me lleva a disfrutar de los coworkings como lugares de encuentro. Además, en mi tiempo libre, me encanta explorar nuevos horizontes participando en talleres y cursos que me permiten descubrir cosas nuevas.
+            </p>
+            <p>
+                Entre mis actividades favoritas, destaco mis salidas a eventos como Mundolingo, un bar que fomenta el intercambio de idiomas, y Tandem alemán, una reunión en un restaurante de comida alemana donde se practica el alemán.
+            </p>
+            <p>
+                Además, me encanta sumergirme en la atmósfera única de las reuniones de la asociación civil "Fuego Austral", la versión argentina del famoso "Burning Man".
+            </p>
+            <p>
+                Por último, una de mis grandes pasiones es el mundo de las plantas de interior. Me cautivan las variedades tropicales y exóticas, y disfruto cuidando y cultivando estas bellezas verdes en mi hogar.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
+
+
+ {% endcomment %}
+
+
+
+{% endblock contenido %}
+    
